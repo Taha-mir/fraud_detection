@@ -1,0 +1,6 @@
+### کتابخانه‌های مورد نیاز
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+- seaborn

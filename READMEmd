@@ -1,0 +1,83 @@
+# README.md
+
+## Fraudulent Transaction Detection
+این پروژه یک مدل یادگیری ماشین برای شناسایی تراکنش‌های تقلبی طراحی می‌کند. داده‌ها پاکسازی شده، مدل آموزش داده می‌شود و عملکرد آن ارزیابی می‌شود. در نهایت امکان پیش‌بینی تراکنش جدید نیز فراهم شده است.
+
+---
+
+### ویژگی‌ها
+- پاکسازی داده‌ها (Missing Values، Outliers، Multi-Collinearity)
+- آموزش مدل **RandomForestClassifier** با کلاس‌های نامتوازن
+- ارزیابی با **Confusion Matrix، ROC-AUC، Precision، Recall**
+- پیش‌بینی تراکنش جدید با ورودی کاربر
+
+---
+
+### ساختار پوشه
+```
+fraud_detection/
+│
+├── data/                  # داده‌ها (مثلاً Fraud.csv)
+├── notebooks/             # اگر Jupyter Notebook بود
+├── src/                   # کدهای اصلی
+│   ├── data_preprocessing.py
+│   ├── model_training.py
+│   ├── model_evaluation.py
+│   └── prediction_app.py
+├── main.py                # اجرای اصلی پروژه
+├── requirements.txt       # کتابخانه‌های مورد نیاز
+└── README.md              # این فایل
+```
+
+---
+
+### نصب
+1. مخزن را کلون کنید:
+```bash
+git clone https://github.com/USERNAME/fraud_detection.git
+cd fraud_detection
+```
+
+2. محیط مجازی بسازید و فعال کنید:
+```bash
+python -m venv venv
+source venv/bin/activate  # در ویندوز: venv\Scripts\activate
+```
+
+3. کتابخانه‌ها را نصب کنید:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### اجرا
+1. داده‌ها را در پوشه `data/` قرار دهید (مثلاً `Fraud.csv`).
+2. پروژه را اجرا کنید:
+```bash
+python main.py
+```
+
+---
+
+### خروجی‌ها
+- Confusion Matrix
+- Precision, Recall, F1-Score
+- ROC Curve و ROC-AUC
+- لیست ویژگی‌های مهم مدل
+
+---
+
+### پیش‌بینی تراکنش جدید
+پس از آموزش مدل، اسکریپت از شما مقادیری برای تراکنش جدید می‌پرسد و احتمال تقلب بودن آن را پیش‌بینی می‌کند.
+
+---
+
+### کتابخانه‌های مورد نیاز
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+- seaborn
+###دانلود دیتاست
+https://storage.googleapis.com/kaggle-data-sets/310/23498/compressed/creditcard.csv.zip?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gcp-kaggle-com%40kaggle-161607.iam.gserviceaccount.com%2F20250921%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250921T102500Z&X-Goog-Expires=259200&X-Goog-SignedHeaders=host&X-Goog-Signature=28f3b682353ac52b764e293a4a34045fc0ff2576b57630e218ce68db89e356f84742e17ad8f3c0661bd918cae49e80160d63bc418949dffd9b8b16bd68d8c8fab887fe449367fd81e74b9827c3e7b4c54b0b44324340399e9f12218838c0cbc349a729b331bf756d8c17922daeb02cc1768e6cd89ad4276b03fa5a12f5e3a554e1d98b888909e0ea82ac71941a93298c89886d541028d9d359f35f6d3a8d2fa6a854759e787963a0fc96152957586420f0d77f0885a40f50611907cce06c9cadf2c96bb2859b7976fd537ff96cb923bc12f24cc79b12d8558227d540a9ae3d369e0b1fb21dcc1bf9b0493d7176e77a1762f02b9fc3bf57e2154e2f6138b0c92c
